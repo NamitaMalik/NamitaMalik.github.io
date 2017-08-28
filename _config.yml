@@ -1,0 +1,8 @@
+title: NamitaMalik.GitHub.io
+description: LEARN.THINK.CODE.SHARE
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
