@@ -3,6 +3,6 @@ description: LEARN.THINK.CODE.SHARE
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-cayman
-
+future: true
 gems:
   - jekyll-mentions
