@@ -10,9 +10,6 @@ Angular2
 * [Services In Angular2](https://namitamalik.github.io/Services-in-Angular2/)
 * [NgRepeat vs ngFor](https://namitamalik.github.io/NgRepeat-vs-ngFor/)
 
-Data Structures
----------------
-* [Linked List in Javascript](https://namitamalik.github.io/Linked-list-in-Javascript/)
 
 ECMA6
 ---
