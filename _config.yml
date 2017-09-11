@@ -3,6 +3,7 @@ description: LEARN.THINK.CODE.SHARE
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-cayman
+timezone: UTC +5:30
 future: true
 gems:
   - jekyll-mentions
