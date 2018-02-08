@@ -16,8 +16,8 @@ Data Structures
 
 ECMA6
 ---
-
 * [Spread & Rest Operator in ES6](https://namitamalik.github.io/Spread-and-Rest-Operator-in-ES6/)
+* [for..of loop in ES6](https://namitamalik.github.io/for..of-in-ECMA6/)
 
 RxJs
 ---
