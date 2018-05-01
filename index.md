@@ -22,7 +22,7 @@ ECMA6
 RxJs
 ---
 
-* [throttleTime vs debounceTime](https://github.com/NamitaMalik/throttleTime-vs-debounceTime-in-RxJS)
+* [throttleTime vs debounceTime](https://namitamalik.github.io/throttleTime-vs-debounceTime-in-RxJS/)
 * [Map vs FlatMap](https://namitamalik.github.io/Map-vs-FlatMap/)
 
 AngularJS
