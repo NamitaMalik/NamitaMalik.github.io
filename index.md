@@ -2,7 +2,6 @@
 
 Angular2
 --------
-
 * [Lazy Loading with Angular2 Routing](https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/)
 * [Realtime Update in Angular2](https://namitamalik.github.io/Realtime-Update-in-Angular2/)
 * [Fetching Data in Angular2](https://namitamalik.github.io/Fetching-Data-in-Angular2/)
@@ -27,7 +26,6 @@ RxJs
 
 AngularJS
 ---
-
 * [Editing JavaScript Object using AngularJS](https://namitamalik.github.io/Editing-JavaScript-Object-using-AngularJS/)
 * [E2E Testing with Protractor](https://namitamalik.github.io/E2E-testing-with-Protractor/)
 * [$routeParams in AngularJS](https://namitamalik.github.io/routeParams-in-AngularJS/)
@@ -37,7 +35,6 @@ AngularJS
 
 JavaScript
 ---
-
 * [Prototype in Javascript](https://namitamalik.github.io/Prototype-in-JavaScript/)
 * [Inheritance in JavaScript](https://namitamalik.github.io/Inheritance-in-JavaScript/)
 * [JavaScript Inheritance Revisited](https://namitamalik.github.io/JavaScript-Inheritance-Revisited/)
