@@ -2,7 +2,6 @@
 
 Angular2
 --------
-
 * [Lazy Loading with Angular2 Routing](https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/)
 * [Realtime Update in Angular2](https://namitamalik.github.io/Realtime-Update-in-Angular2/)
 * [Fetching Data in Angular2](https://namitamalik.github.io/Fetching-Data-in-Angular2/)
@@ -21,12 +20,12 @@ ECMA6
 
 RxJs
 ---
-
+* [skipWhile-vs-filter-in-RxJS](https://namitamalik.github.io/skipWhile-vs-filter-in-RxJS/)
+* [throttleTime vs debounceTime](https://namitamalik.github.io/throttleTime-vs-debounceTime-in-RxJS/)
 * [Map vs FlatMap](https://namitamalik.github.io/Map-vs-FlatMap/)
 
 AngularJS
 ---
-
 * [Editing JavaScript Object using AngularJS](https://namitamalik.github.io/Editing-JavaScript-Object-using-AngularJS/)
 * [E2E Testing with Protractor](https://namitamalik.github.io/E2E-testing-with-Protractor/)
 * [$routeParams in AngularJS](https://namitamalik.github.io/routeParams-in-AngularJS/)
