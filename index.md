@@ -21,7 +21,7 @@ ECMA6
 
 RxJs
 ---
-
+* [skipWhile-vs-filter-in-RxJS](https://namitamalik.github.io/skipWhile-vs-filter-in-RxJS/)
 * [throttleTime vs debounceTime](https://namitamalik.github.io/throttleTime-vs-debounceTime-in-RxJS/)
 * [Map vs FlatMap](https://namitamalik.github.io/Map-vs-FlatMap/)
 
