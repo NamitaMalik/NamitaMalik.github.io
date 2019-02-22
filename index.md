@@ -1,6 +1,6 @@
 #Blogs :
 
-Angular2
+Angular2+
 --------
 * [Lazy Loading with Angular2 Routing](https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/)
 * [Realtime Update in Angular2](https://namitamalik.github.io/Realtime-Update-in-Angular2/)
@@ -9,20 +9,28 @@ Angular2
 * [Services In Angular2](https://namitamalik.github.io/Services-in-Angular2/)
 * [NgRepeat vs ngFor](https://namitamalik.github.io/NgRepeat-vs-ngFor/)
 
-Data Structures
----------------
-* [Linked List in Javascript](https://namitamalik.github.io/Linked-list-in-Javascript/)
-
-ECMA6
+NgRx
 ---
-* [Spread & Rest Operator in ES6](https://namitamalik.github.io/Spread-and-Rest-Operator-in-ES6/)
-* [for..of loop in ES6](https://namitamalik.github.io/for..of-in-ECMA6/)
+* [Getting Started with NgRx](https://namitamalik.github.io/NgRx-Experiments/)
 
 RxJs
 ---
 * [skipWhile-vs-filter-in-RxJS](https://namitamalik.github.io/skipWhile-vs-filter-in-RxJS/)
 * [throttleTime vs debounceTime](https://namitamalik.github.io/throttleTime-vs-debounceTime-in-RxJS/)
 * [Map vs FlatMap](https://namitamalik.github.io/Map-vs-FlatMap/)
+
+ECMA6
+---
+* [Spread & Rest Operator in ES6](https://namitamalik.github.io/Spread-and-Rest-Operator-in-ES6/)
+* [for..of loop in ES6](https://namitamalik.github.io/for..of-in-ECMA6/)
+
+JavaScript
+---
+* [Prototype in Javascript](https://namitamalik.github.io/Prototype-in-JavaScript/)
+* [Inheritance in JavaScript](https://namitamalik.github.io/Inheritance-in-JavaScript/)
+* [JavaScript Inheritance Revisited](https://namitamalik.github.io/JavaScript-Inheritance-Revisited/)
+* [2 Way Data Binding in Plain Vanilla JavaScript](https://namitamalik.github.io/2-way-data-binding-in-Plain-Vanilla-JavaScript/)
+* [Hoisting in JavaScript](https://namitamalik.github.io/Hoisting/)
 
 AngularJS
 ---
@@ -33,13 +41,9 @@ AngularJS
 * [MVC and MVVM with AngularJS](https://namitamalik.github.io/MVC-and-MVVM-with-AngularJS/)
 * [Auto-Scroll-To Directive](https://namitamalik.github.io/Auto-Scroll-To-Directive/)
 
-JavaScript
----
-* [Prototype in Javascript](https://namitamalik.github.io/Prototype-in-JavaScript/)
-* [Inheritance in JavaScript](https://namitamalik.github.io/Inheritance-in-JavaScript/)
-* [JavaScript Inheritance Revisited](https://namitamalik.github.io/JavaScript-Inheritance-Revisited/)
-* [2 Way Data Binding in Plain Vanilla JavaScript](https://namitamalik.github.io/2-way-data-binding-in-Plain-Vanilla-JavaScript/)
-* [Hoisting in JavaScript](https://namitamalik.github.io/Hoisting/)
+Data Structures
+---------------
+* [Linked List in Javascript](https://namitamalik.github.io/Linked-list-in-Javascript/)
 
 Follow Me
 ---
