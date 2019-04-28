@@ -2,6 +2,7 @@
 
 Angular2+
 --------
+* [Conditionally Loading modules in Angular](https://namitamalik.github.io/Loading-modules-conditionally-in-Angular/)
 * [Lazy Loading with Angular2 Routing](https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/)
 * [Realtime Update in Angular2](https://namitamalik.github.io/Realtime-Update-in-Angular2/)
 * [Fetching Data in Angular2](https://namitamalik.github.io/Fetching-Data-in-Angular2/)
