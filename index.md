@@ -9,9 +9,6 @@ Angular2+
 * [Services In Angular2](https://namitamalik.github.io/Services-in-Angular2/)
 * [NgRepeat vs ngFor](https://namitamalik.github.io/NgRepeat-vs-ngFor/)
 
-NgRx
----
-* [Getting Started with NgRx](https://namitamalik.github.io/NgRx-Experiments/)
 
 RxJs
 ---
@@ -24,13 +21,18 @@ ECMA6
 * [Spread & Rest Operator in ES6](https://namitamalik.github.io/Spread-and-Rest-Operator-in-ES6/)
 * [for..of loop in ES6](https://namitamalik.github.io/for..of-in-ECMA6/)
 
-JavaScript
+JavaScript (ECMA5)
 ---
+
 * [Prototype in Javascript](https://namitamalik.github.io/Prototype-in-JavaScript/)
 * [Inheritance in JavaScript](https://namitamalik.github.io/Inheritance-in-JavaScript/)
 * [JavaScript Inheritance Revisited](https://namitamalik.github.io/JavaScript-Inheritance-Revisited/)
 * [2 Way Data Binding in Plain Vanilla JavaScript](https://namitamalik.github.io/2-way-data-binding-in-Plain-Vanilla-JavaScript/)
 * [Hoisting in JavaScript](https://namitamalik.github.io/Hoisting/)
+
+Data Structures
+---------------
+* [Linked List in Javascript](https://namitamalik.github.io/Linked-list-in-Javascript/)
 
 AngularJS
 ---
@@ -40,10 +42,6 @@ AngularJS
 * [Filters in AngularJS](https://namitamalik.github.io/Filters-in-AngularJS/)
 * [MVC and MVVM with AngularJS](https://namitamalik.github.io/MVC-and-MVVM-with-AngularJS/)
 * [Auto-Scroll-To Directive](https://namitamalik.github.io/Auto-Scroll-To-Directive/)
-
-Data Structures
----------------
-* [Linked List in Javascript](https://namitamalik.github.io/Linked-list-in-Javascript/)
 
 Follow Me
 ---
