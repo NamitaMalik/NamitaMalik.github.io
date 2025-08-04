@@ -1,0 +1,155 @@
+# Loading Modules Conditionally in Angular
+
+One of the very common features of Admin dashboard applications is **Access Control**. 
+This is usually achieved through a set of permissions. A feature is displayed or hidden from the user depending upon the set of permissions he/she has.
+One can build a service or a directive or both to achieve this.
+
+Now, what if user should doesn't have permission to access the complete module? We can off course hide 
+all the components belonging to that module from user but wouldn't it be great if we don't even load the 
+entire module for that user.
+
+In one of my previous blogs, I had discussed about lazy loading angular modules using routing. 
+So let's now extend this feature a bit more and load the modules conditionally i.e. as per user access.
+
+I have a simple Angular application that has 3 modules:
+
+1. `AppModule` - This is the root module of the application.
+2. `TasksModule` - Child Module. Comprises of `TasksComponent` and `TasksListComponent`.
+3. `UsersModule` - Child Module. Comprises of `UsersComponent` and `UsersListComponent`.
+
+Now, we want only users with permission `View Users` to be able to access users related info.
+
+First, let's quickly review over `AppRoutingModule`. It looks like this:
+
+```TypeScript
+import {NgModule} from '@angular/core';
+import { PreloadAllModules, RouterModule } from '@angular/router';
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot([
+      {path: '', redirectTo: '/tasks', pathMatch: 'full'},
+      {path: 'tasks', loadChildren: './tasks/tasks.module#TasksModule'},
+      {path: 'users', loadChildren: './users/users.module#UsersModule', data: {permission: 'View Users'}
+      }
+    ], {
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule {}
+```
+
+Let's create a service which will make a `http request` and fetch the permissions for the logged in user.
+For demo purposes, I have taken a hardcoded json in my assets folder. My `app.service.ts` looks as given below:
+
+```TypeScript
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AppService {
+  availablePermissions: any[];
+  constructor(private http: HttpClient) { }
+  public load() {
+    return new Promise((resolve) => {
+      this.http.get<any>('assets/permissions.json')
+        .subscribe( (response) => {
+        this.availablePermissions = response.availablePermissions;
+        resolve(true);
+      });
+    });
+  }
+}
+```
+
+Now, let's move to our `AppModule`. With respect to this demo, I would want permissions for a user to be 
+available before the app is initialized, therefore I do the following:
+
+```
+ providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (appService: AppService) => () => appService.load(),
+      deps: [AppService],
+      multi: true
+    }
+  ],
+ ```
+ 
+Now, next step is to add a `Route guard` to our application. A route guard supports multiple guard interfaces.
+For our case we would need to implement `CanLoad` interface which will mediate navigation to `UsersModule` asynchronously.
+
+```TypeScript
+import { Injectable } from '@angular/core';
+import { CanLoad, Route } from '@angular/router';
+import { AppService } from './app.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthGuard implements CanLoad {
+  constructor(private appService: AppService) {
+  }
+
+  canLoad(route: Route): boolean {
+    return this.appService.availablePermissions.indexOf(route.data.permission) !== -1;
+  }
+}
+```
+
+In the above code, we simple created an `AuthGuard` class which implements `CanLoad` interface. In `canLoad` 
+function we basically check if the permission needed to access `UsersModule` is available to the user and returns 
+a boolean accordingly. You can also return an observable of boolean from the `canLoad` function, which is very
+likely in real world applications.
+
+Now, the last part. We need do a minor addition in our `AppRoutingModule` where we have configured our routes.
+We will add a `canLoad` property to our route definition for `UsersModule` and provide our `AuthGuard` to it.
+
+```TypeScript
+import {NgModule} from '@angular/core';
+import { PreloadAllModules, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+
+@NgModule({
+  imports: [
+    RouterModule.forRoot([
+      {path: '', redirectTo: '/tasks', pathMatch: 'full'},
+      {path: 'tasks', loadChildren: './tasks/tasks.module#TasksModule'},
+      {path: 'users', loadChildren: './users/users.module#UsersModule', data: {permission: 'View Users'},
+        canLoad: [AuthGuard]}
+    ], {
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutingModule {}
+```
+
+![Users-Module-Not-Loading](https://raw.githubusercontent.com/NamitaMalik/Loading-modules-conditionally-in-Angular/master/src/assets/Preloaded_Module.gif)
+
+Now, you would notice, even though our `preloadingStrategy` is `PreloadAllModules`, it will load `UsersModule` 
+only when our `AuthGuard` returns true. You can also use a custom `preloadingStrategy` if you want to.
+
+![Uses-Module-Not-Loading-On-PreloadStrategy](https://raw.githubusercontent.com/NamitaMalik/Loading-modules-conditionally-in-Angular/master/src/assets/Preloaded_Module.gif)
+
+Well, that's all for this post. Happy Learning!
+
+
+Follow Me
+---
+[Github](https://github.com/NamitaMalik)
+
+[Twitter](https://twitter.com/namita13_04)
+
+[LinkedIn](https://in.linkedin.com/in/namita-malik-a7885b23)
+
+[More Blogs By Me](https://namitamalik.github.io/)
