@@ -39,16 +39,30 @@ export default function Post() {
                     Back to Blog
                 </Link>
                 
-                {/* Blog Header */}
-                <div className="text-center mb-12 pb-8 border-b border-border/20">
-                    <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
-                        Namita Malik
-                    </h1>
-                    <p className="text-muted-foreground text-lg mb-6">
-                        Web Developer • Angular • JavaScript • RxJS
+                {/* Minimal Author Header */}
+                <div className="text-center mb-8 pb-4 border-b border-border/10">
+                    <p className="text-muted-foreground text-sm">
+                        by <span className="font-medium text-foreground">Namita Malik</span>
                     </p>
-                    
-                    {/* Social Media Icons */}
+                </div>
+                
+                <article className="prose prose-lg max-w-none mb-16
+                    prose-headings:text-foreground prose-headings:font-playfair
+                    prose-h1:text-3xl prose-h1:md:text-4xl prose-h1:font-bold prose-h1:mb-6
+                    prose-p:text-foreground prose-p:leading-relaxed
+                    prose-a:text-primary prose-a:no-underline hover:prose-a:text-accent
+                    prose-code:text-accent prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+                    prose-pre:bg-muted prose-pre:border prose-pre:border-border
+                    prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground
+                    prose-strong:text-foreground prose-em:text-foreground">
+                    <Component />
+                </article>
+
+                {/* Social Media Icons at Bottom */}
+                <div className="text-center pt-8 border-t border-border/20">
+                    <p className="text-muted-foreground text-sm mb-4">
+                        Connect with me
+                    </p>
                     <div className="flex items-center justify-center gap-4">
                         <a 
                             href="https://github.com/namitamalik" 
@@ -86,17 +100,6 @@ export default function Post() {
                         </button>
                     </div>
                 </div>
-                
-                <article className="prose prose-lg max-w-none 
-                    prose-headings:text-foreground prose-headings:font-playfair
-                    prose-p:text-foreground prose-p:leading-relaxed
-                    prose-a:text-primary prose-a:no-underline hover:prose-a:text-accent
-                    prose-code:text-accent prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-                    prose-pre:bg-muted prose-pre:border prose-pre:border-border
-                    prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground
-                    prose-strong:text-foreground prose-em:text-foreground">
-                    <Component />
-                </article>
             </div>
         </div>
     );
