@@ -46,15 +46,19 @@ export default function Post() {
                     </p>
                 </div>
                 
+                
                 <article className="prose prose-lg max-w-none mb-16
                     prose-headings:text-foreground prose-headings:font-playfair
-                    prose-h1:text-3xl prose-h1:md:text-4xl prose-h1:font-bold prose-h1:mb-6
-                    prose-p:text-foreground prose-p:leading-relaxed
+                    prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:mb-8 prose-h1:pb-6 prose-h1:border-b prose-h1:border-border/30 prose-h1:text-center
+                    prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:font-semibold prose-h2:mt-8 prose-h2:mb-4
+                    prose-h3:text-xl prose-h3:md:text-2xl prose-h3:font-medium prose-h3:mt-6 prose-h3:mb-3
+                    prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-4
                     prose-a:text-primary prose-a:no-underline hover:prose-a:text-accent
-                    prose-code:text-accent prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded
-                    prose-pre:bg-muted prose-pre:border prose-pre:border-border
+                    prose-code:text-accent prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+                    prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:rounded-lg prose-pre:p-4
                     prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground
-                    prose-strong:text-foreground prose-em:text-foreground">
+                    prose-strong:text-foreground prose-em:text-foreground
+                    prose-ul:my-4 prose-ol:my-4 prose-li:my-1">
                     <Component />
                 </article>
 
