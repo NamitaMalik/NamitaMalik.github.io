@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Code2, BookOpen, Lightbulb, Share2 } from "lucide-react";
+import { Code2, BookOpen, Lightbulb, Share2, Github, Twitter, Linkedin } from "lucide-react";
 
 export const BlogHero = () => {
   return (
@@ -41,10 +41,41 @@ export const BlogHero = () => {
           </div>
         </div>
         
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
           Exploring the world of web development through Angular, JavaScript, RxJS, and modern web technologies. 
           Join me on this journey of continuous learning and knowledge sharing.
         </p>
+        
+        {/* Social Media Icons */}
+        <div className="flex items-center justify-center gap-6">
+          <a 
+            href="https://github.com/namitamalik" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border/50 hover:border-primary/50 hover:bg-accent/10 transition-smooth group"
+            aria-label="GitHub Profile"
+          >
+            <Github className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+          </a>
+          <a 
+            href="https://twitter.com/namitamalik" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border/50 hover:border-primary/50 hover:bg-accent/10 transition-smooth group"
+            aria-label="Twitter Profile"
+          >
+            <Twitter className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+          </a>
+          <a 
+            href="https://linkedin.com/in/namitamalik" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border/50 hover:border-primary/50 hover:bg-accent/10 transition-smooth group"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+          </a>
+        </div>
       </div>
     </section>
   );
