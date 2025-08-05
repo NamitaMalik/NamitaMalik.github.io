@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import type { ComponentType } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Github, Twitter, Linkedin, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Tell TS that each MDX module exports a React component as default
@@ -38,6 +38,54 @@ export default function Post() {
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Back to Blog
                 </Link>
+                
+                {/* Blog Header */}
+                <div className="text-center mb-12 pb-8 border-b border-border/20">
+                    <h1 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+                        Namita Malik
+                    </h1>
+                    <p className="text-muted-foreground text-lg mb-6">
+                        Web Developer • Angular • JavaScript • RxJS
+                    </p>
+                    
+                    {/* Social Media Icons */}
+                    <div className="flex items-center justify-center gap-4">
+                        <a 
+                            href="https://github.com/namitamalik" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
+                            aria-label="GitHub Profile"
+                        >
+                            <Github className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+                        </a>
+                        <a 
+                            href="https://twitter.com/namitamalik" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
+                            aria-label="Twitter Profile"
+                        >
+                            <Twitter className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+                        </a>
+                        <a 
+                            href="https://linkedin.com/in/namitamalik" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
+                            aria-label="LinkedIn Profile"
+                        >
+                            <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+                        </a>
+                        <button 
+                            onClick={() => navigator.share?.({ url: window.location.href, title: document.title })}
+                            className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
+                            aria-label="Share this post"
+                        >
+                            <Share2 className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
+                        </button>
+                    </div>
+                </div>
                 
                 <article className="prose prose-lg max-w-none 
                     prose-headings:text-foreground prose-headings:font-playfair
