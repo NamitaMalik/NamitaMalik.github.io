@@ -9,7 +9,7 @@ const Index = () => {
       icon: <Layers className="h-6 w-6" />,
       description: "Modern Angular development patterns, best practices, and advanced techniques.",
       posts: [
-        { title: "Conditionally Loading modules in Angular", url: "https://namitamalik.github.io/loading-modules-conditionally-in-angular/", category: "Angular2+" },
+        { title: "Conditionally Loading modules in Angular", url: "/loading-modules-conditionally-in-angular/", category: "Angular2+" },
         { title: "Lazy Loading with Angular2 Routing", url: "https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/", category: "Angular2+" },
         { title: "Realtime Update in Angular2", url: "https://namitamalik.github.io/Realtime-Update-in-Angular2/", category: "Angular2+" },
         { title: "Fetching Data in Angular2", url: "https://namitamalik.github.io/Fetching-Data-in-Angular2/", category: "Angular2+" },

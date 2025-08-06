@@ -93,9 +93,60 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						code: {
+							backgroundColor: 'hsl(var(--muted, #f4f4f5))',
+							color: 'hsl(var(--accent, #18181b))',
+							borderRadius: '0.375rem',
+							padding: '0.2em 0.4em',
+							fontSize: '0.95em',
+							border: '1px solid hsl(var(--border, #e5e7eb))',
+							boxShadow: 'none',
+						},
+						pre: {
+							backgroundColor: '#18181b',
+							color: '#f4f4f5',
+							borderRadius: '0.75rem',
+							padding: '1.25em',
+							fontSize: '1em',
+							overflowX: 'auto',
+						},
+						'pre code': {
+							backgroundColor: 'transparent',
+							color: 'inherit',
+							padding: 0,
+							borderRadius: 0,
+							fontSize: 'inherit',
+						}
+					},
+				},
+				dark: {
+					css: {
+						pre: {
+							backgroundColor: '#18181b',
+							color: '#f4f4f5',
+						},
+						code: {
+							backgroundColor: 'hsl(var(--muted, #23233b))',
+							color: 'hsl(var(--accent, #22d3ee))',
+							borderRadius: '0.375rem',
+							padding: '0.2em 0.4em',
+							fontSize: '0.95em',
+							border: '1px solid hsl(var(--border, #333))',
+							boxShadow: 'none',
+						},
+						'pre code': {
+							backgroundColor: 'transparent',
+							color: 'inherit',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate"),require("@tailwindcss/typography")
-],
+	plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")
+	],
 } satisfies Config;

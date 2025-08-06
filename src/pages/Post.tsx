@@ -38,27 +38,25 @@ export default function Post() {
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Back to Blog
                 </Link>
-                
+
                 {/* Minimal Author Header */}
                 <div className="text-center mb-8 pb-4 border-b border-border/10">
                     <p className="text-muted-foreground text-sm">
                         by <span className="font-medium text-foreground">Namita Malik</span>
                     </p>
                 </div>
-                
-                
+
+
                 <article className="prose prose-lg max-w-none mb-16
-                    prose-headings:text-foreground prose-headings:font-playfair
-                    prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:mb-8 prose-h1:pb-6 prose-h1:border-b prose-h1:border-border/30 prose-h1:text-center
-                    prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:font-semibold prose-h2:mt-8 prose-h2:mb-4
-                    prose-h3:text-xl prose-h3:md:text-2xl prose-h3:font-medium prose-h3:mt-6 prose-h3:mb-3
-                    prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-4
-                    prose-a:text-primary prose-a:no-underline hover:prose-a:text-accent
-                    prose-code:text-accent prose-code:bg-muted prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
-                    prose-pre:bg-muted prose-pre:border prose-pre:border-border prose-pre:rounded-lg prose-pre:p-4
-                    prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground
-                    prose-strong:text-foreground prose-em:text-foreground
-                    prose-ul:my-4 prose-ol:my-4 prose-li:my-1">
+  prose-headings:text-foreground prose-headings:font-playfair
+  prose-h1:text-4xl prose-h1:md:text-5xl prose-h1:font-bold prose-h1:mb-8 prose-h1:pb-6 prose-h1:border-b prose-h1:border-border/30 prose-h1:text-center
+  prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:font-semibold prose-h2:mt-8 prose-h2:mb-4
+  prose-h3:text-xl prose-h3:md:text-2xl prose-h3:font-medium prose-h3:mt-6 prose-h3:mb-3
+  prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-4
+  prose-a:text-primary prose-a:no-underline hover:prose-a:text-accent
+  prose-blockquote:border-l-primary prose-blockquote:text-muted-foreground
+  prose-strong:text-foreground prose-em:text-foreground
+  prose-ul:my-4 prose-ol:my-4 prose-li:my-1 prose-code:before:content-none prose-code:after:content-none">
                     <Component />
                 </article>
 
@@ -68,34 +66,34 @@ export default function Post() {
                         Connect with me
                     </p>
                     <div className="flex items-center justify-center gap-4">
-                        <a 
-                            href="https://github.com/namitamalik" 
-                            target="_blank" 
+                        <a
+                            href="https://github.com/namitamalik"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
                             aria-label="GitHub Profile"
                         >
                             <Github className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
                         </a>
-                        <a 
-                            href="https://twitter.com/namitamalik" 
-                            target="_blank" 
+                        <a
+                            href="https://twitter.com/namitamalik"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
                             aria-label="Twitter Profile"
                         >
                             <Twitter className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
                         </a>
-                        <a 
-                            href="https://linkedin.com/in/namitamalik" 
-                            target="_blank" 
+                        <a
+                            href="https://linkedin.com/in/namitamalik"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
                             aria-label="LinkedIn Profile"
                         >
                             <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
                         </a>
-                        <button 
+                        <button
                             onClick={() => navigator.share?.({ url: window.location.href, title: document.title })}
                             className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
                             aria-label="Share this post"
