@@ -5,17 +5,17 @@ import { Code2, Zap, Database, Globe, Layers, Settings } from "lucide-react";
 const Index = () => {
   const blogData = [
     {
-      category: "Angular2+",
+      category: "Angular(2+)",
       icon: <Layers className="h-6 w-6" />,
       description: "Modern Angular development patterns, best practices, and advanced techniques.",
       posts: [
-        { title: "Conditionally Loading modules in Angular", url: "/loading-modules-conditionally-in-angular/", category: "Angular2+" },
-        { title: "Lazy Loading with Angular2 Routing", url: "https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/", category: "Angular2+" },
-        { title: "Realtime Update in Angular2", url: "https://namitamalik.github.io/Realtime-Update-in-Angular2/", category: "Angular2+" },
-        { title: "Fetching Data in Angular2", url: "https://namitamalik.github.io/Fetching-Data-in-Angular2/", category: "Angular2+" },
-        { title: "ViewChild in Angular2", url: "https://namitamalik.github.io/ViewChild-in-Angular2/", category: "Angular2+" },
-        { title: "Services In Angular2", url: "https://namitamalik.github.io/Services-in-Angular2/", category: "Angular2+" },
-        { title: "NgRepeat vs ngFor", url: "https://namitamalik.github.io/NgRepeat-vs-ngFor/", category: "Angular2+" }
+        { title: "Conditionally Loading modules in Angular", url: "/loading-modules-conditionally-in-angular/", category: "Angular(2+)" },
+        { title: "Lazy Loading with Angular2 Routing", url: "https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/", category: "Angular(2+)" },
+        { title: "Realtime Update in Angular2", url: "https://namitamalik.github.io/Realtime-Update-in-Angular2/", category: "Angular(2+)" },
+        { title: "Fetching Data in Angular2", url: "https://namitamalik.github.io/Fetching-Data-in-Angular2/", category: "Angular(2+)" },
+        { title: "ViewChild in Angular2", url: "https://namitamalik.github.io/ViewChild-in-Angular2/", category: "Angular(2+)" },
+        { title: "Services In Angular2", url: "https://namitamalik.github.io/Services-in-Angular2/", category: "Angular(2+)" },
+        { title: "NgRepeat vs ngFor", url: "https://namitamalik.github.io/NgRepeat-vs-ngFor/", category: "Angular(2+)" }
       ]
     },
     {
@@ -98,21 +98,6 @@ const Index = () => {
               />
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-16 animate-fade-in">
-          <p className="text-muted-foreground">
-            Want to explore more? Visit the{" "}
-            <a 
-              href="https://namitamalik.github.io/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary hover:text-accent transition-smooth font-medium underline"
-            >
-              original blog
-            </a>
-            {" "}for the complete archive.
-          </p>
         </div>
       </main>
     </div>

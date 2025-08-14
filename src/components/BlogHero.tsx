@@ -58,7 +58,7 @@ export const BlogHero = () => {
             <Github className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
           </a>
           <a 
-            href="https://twitter.com/namitamalik" 
+            href="https://twitter.com/nm_1304"
             target="_blank" 
             rel="noopener noreferrer"
             className="p-3 rounded-full border border-border/50 hover:border-primary/50 hover:bg-accent/10 transition-smooth group"
