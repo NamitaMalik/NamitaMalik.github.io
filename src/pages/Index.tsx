@@ -5,17 +5,17 @@ import { Code2, Zap, Database, Globe, Layers, Settings } from "lucide-react";
 const Index = () => {
   const blogData = [
     {
-      category: "Angular(2+)",
+      category: "Angular",
       icon: <Layers className="h-6 w-6" />,
       description: "Modern Angular development patterns, best practices, and advanced techniques.",
       posts: [
         { title: "Conditionally Loading modules in Angular", url: "/loading-modules-conditionally-in-angular/", category: "Angular(2+)" },
-        { title: "Lazy Loading with Angular2 Routing", url: "https://namitamalik.github.io/Lazy-Loading-with-Angular2-Routing/", category: "Angular(2+)" },
-        { title: "Realtime Update in Angular2", url: "https://namitamalik.github.io/Realtime-Update-in-Angular2/", category: "Angular(2+)" },
-        { title: "Fetching Data in Angular2", url: "https://namitamalik.github.io/Fetching-Data-in-Angular2/", category: "Angular(2+)" },
-        { title: "ViewChild in Angular2", url: "https://namitamalik.github.io/ViewChild-in-Angular2/", category: "Angular(2+)" },
-        { title: "Services In Angular2", url: "https://namitamalik.github.io/Services-in-Angular2/", category: "Angular(2+)" },
-        { title: "NgRepeat vs ngFor", url: "https://namitamalik.github.io/NgRepeat-vs-ngFor/", category: "Angular(2+)" }
+        { title: "Lazy Loading with Angular2 Routing", url: "/lazy-loading-with-angular2-routing/", category: "Angular(2+)" },
+        { title: "Realtime Update in Angular2", url: "/realtime-update-in-angular2/", category: "Angular(2+)" },
+        { title: "Fetching Data in Angular2", url: "/fetching-data-in-angular2/", category: "Angular(2+)" },
+        { title: "ViewChild in Angular2", url: "/viewchild-in-angular2/", category: "Angular(2+)" },
+        { title: "Services In Angular2", url: "/services-in-angular2/", category: "Angular(2+)" },
+        { title: "NgRepeat vs ngFor", url: "/ngrepeat-vs-ngfor/", category: "Angular(2+)" }
       ]
     },
     {
@@ -23,9 +23,9 @@ const Index = () => {
       icon: <Zap className="h-6 w-6" />,
       description: "Reactive programming with RxJS - operators, patterns, and real-world applications.",
       posts: [
-        { title: "skipWhile vs filter in RxJS", url: "https://namitamalik.github.io/skipWhile-vs-filter-in-RxJS/", category: "RxJS" },
-        { title: "throttleTime vs debounceTime", url: "https://namitamalik.github.io/throttleTime-vs-debounceTime-in-RxJS/", category: "RxJS" },
-        { title: "Map vs FlatMap", url: "https://namitamalik.github.io/Map-vs-FlatMap/", category: "RxJS" }
+        { title: "skipWhile vs filter in RxJS", url: "/skipwhile-vs-filter-in-rxjs/", category: "RxJS" },
+        { title: "throttleTime vs debounceTime", url: "/throttletime-vs-debouncetime-in-rxjs/", category: "RxJS" },
+        { title: "Map vs FlatMap", url: "/map-vs-flatmap/", category: "RxJS" }
       ]
     },
     {
@@ -33,8 +33,8 @@ const Index = () => {
       icon: <Globe className="h-6 w-6" />,
       description: "Modern JavaScript features, ES6+ syntax, and functional programming concepts.",
       posts: [
-        { title: "Spread & Rest Operator in ES6", url: "https://namitamalik.github.io/Spread-and-Rest-Operator-in-ES6/", category: "ECMA6" },
-        { title: "for..of loop in ES6", url: "https://namitamalik.github.io/for..of-in-ECMA6/", category: "ECMA6" }
+        { title: "Spread & Rest Operator in ES6", url: "/spread-and-rest-operator-in-es6/", category: "ECMA6" },
+        { title: "for..of loop in ES6", url: "/for-of-in-ecma6/", category: "ECMA6" }
       ]
     },
     {
@@ -42,11 +42,11 @@ const Index = () => {
       icon: <Code2 className="h-6 w-6" />,
       description: "Core JavaScript concepts, prototypes, inheritance, and fundamental patterns.",
       posts: [
-        { title: "Prototype in Javascript", url: "https://namitamalik.github.io/Prototype-in-JavaScript/", category: "JavaScript" },
-        { title: "Inheritance in JavaScript", url: "https://namitamalik.github.io/Inheritance-in-JavaScript/", category: "JavaScript" },
-        { title: "JavaScript Inheritance Revisited", url: "https://namitamalik.github.io/JavaScript-Inheritance-Revisited/", category: "JavaScript" },
-        { title: "2 Way Data Binding in Plain Vanilla JavaScript", url: "https://namitamalik.github.io/2-way-data-binding-in-Plain-Vanilla-JavaScript/", category: "JavaScript" },
-        { title: "Hoisting in JavaScript", url: "https://namitamalik.github.io/Hoisting/", category: "JavaScript" }
+        { title: "Prototype in Javascript", url: "/prototype-in-javascript/", category: "JavaScript" },
+        { title: "Inheritance in JavaScript", url: "/inheritance-in-javascript/", category: "JavaScript" },
+        { title: "JavaScript Inheritance Revisited", url: "/javascript-inheritance-revisited/", category: "JavaScript" },
+        { title: "2 Way Data Binding in Plain Vanilla JavaScript", url: "/2-way-data-binding-in-plain-vanilla-javascript/", category: "JavaScript" },
+        { title: "Hoisting in JavaScript", url: "/hoisting/", category: "JavaScript" }
       ]
     },
     {
@@ -54,7 +54,7 @@ const Index = () => {
       icon: <Database className="h-6 w-6" />,
       description: "Implementation of fundamental data structures and algorithms in JavaScript.",
       posts: [
-        { title: "Linked List in Javascript", url: "https://namitamalik.github.io/Linked-list-in-Javascript/", category: "Data Structures" }
+        { title: "Linked List in Javascript", url: "/linked-list-in-javascript/", category: "Data Structures" }
       ]
     },
     {
@@ -62,9 +62,8 @@ const Index = () => {
       icon: <Settings className="h-6 w-6" />,
       description: "AngularJS 1.x patterns, testing strategies, and migration insights.",
       posts: [
-        { title: "Editing JavaScript Object using AngularJS", url: "https://namitamalik.github.io/Editing-JavaScript-Object-using-AngularJS/", category: "AngularJS" },
-        { title: "E2E Testing with Protractor", url: "https://namitamalik.github.io/E2E-testing-with-Protractor/", category: "AngularJS" },
-        { title: "$routeParams in AngularJS", url: "https://namitamalik.github.io/routeParams-in-AngularJS/", category: "AngularJS" }
+        { title: "Editing JavaScript Object using AngularJS", url: "/editing-javascript-object-using-angularjs/", category: "AngularJS" },
+        { title: "E2E Testing with Protractor", url: "/e2e-testing-with-protractor/", category: "AngularJS" },
       ]
     }
   ];

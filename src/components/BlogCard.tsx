@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface BlogPost {
   title: string;
@@ -33,22 +34,43 @@ export const BlogCard = ({ category, posts, icon, description }: BlogCardProps) 
         </Badge>
       </CardHeader>
       <CardContent className="space-y-3">
-        {posts.map((post, index) => (
-          <a
-            key={index}
-            href={post.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 p-3 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-accent/10 transition-smooth group/link"
-          >
-            <div className="flex-1">
-              <h4 className="font-medium text-sm leading-snug text-foreground group-hover/link:text-primary transition-smooth">
-                {post.title}
-              </h4>
-            </div>
-            <ExternalLink className="h-4 w-4 text-muted-foreground group-hover/link:text-primary transition-smooth" />
-          </a>
-        ))}
+        {posts.map((post, index) => {
+          const isExternal = post.url.startsWith('http');
+          
+          if (isExternal) {
+            return (
+              <a
+                key={index}
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-3 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-accent/10 transition-smooth group/link"
+              >
+                <div className="flex-1">
+                  <h4 className="font-medium text-sm leading-snug text-foreground group-hover/link:text-primary transition-smooth">
+                    {post.title}
+                  </h4>
+                </div>
+                <ExternalLink className="h-4 w-4 text-muted-foreground group-hover/link:text-primary transition-smooth" />
+              </a>
+            );
+          }
+          
+          return (
+            <Link
+              key={index}
+              to={post.url}
+              className="flex items-center gap-2 p-3 rounded-lg border border-border/50 hover:border-primary/30 hover:bg-accent/10 transition-smooth group/link"
+            >
+              <div className="flex-1">
+                <h4 className="font-medium text-sm leading-snug text-foreground group-hover/link:text-primary transition-smooth">
+                  {post.title}
+                </h4>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover/link:text-primary transition-smooth" />
+            </Link>
+          );
+        })}
       </CardContent>
     </Card>
   );
