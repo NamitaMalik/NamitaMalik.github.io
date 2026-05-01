@@ -8,7 +8,9 @@ const Index = () => {
       category: "Software Architecture",
       icon: <Building2 className="h-6 w-6" />,
       description: "System design principles, architectural patterns, and scalable software design.",
-      posts: []
+      posts: [
+        { title: "Dear Future Me: Understand the Layers Before You Add Them", url: "/understand-the-layers-before-you-add-them/", category: "Software Architecture" }
+      ]
     },
     {
       category: "Angular",
