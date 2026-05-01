@@ -5,6 +5,12 @@ import { Code2, Zap, Database, Globe, Layers, Settings, Building2 } from "lucide
 const Index = () => {
   const blogData = [
     {
+      category: "Software Architecture",
+      icon: <Building2 className="h-6 w-6" />,
+      description: "System design principles, architectural patterns, and scalable software design.",
+      posts: []
+    },
+    {
       category: "Angular",
       icon: <Layers className="h-6 w-6" />,
       description: "Modern Angular development patterns, best practices, and advanced techniques.",
