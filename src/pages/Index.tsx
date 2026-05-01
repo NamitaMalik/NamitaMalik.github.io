@@ -1,6 +1,6 @@
 import { BlogHero } from "@/components/BlogHero";
 import { BlogCard } from "@/components/BlogCard";
-import { Code2, Zap, Database, Globe, Layers, Settings } from "lucide-react";
+import { Code2, Zap, Database, Globe, Layers, Settings, Building2 } from "lucide-react";
 
 const Index = () => {
   const blogData = [
@@ -56,6 +56,12 @@ const Index = () => {
       posts: [
         { title: "Linked List in Javascript", url: "/linked-list-in-javascript/", category: "Data Structures" }
       ]
+    },
+    {
+      category: "Software Architecture",
+      icon: <Building2 className="h-6 w-6" />,
+      description: "System design principles, architectural patterns, and scalable software design.",
+      posts: []
     },
     {
       category: "AngularJS (Legacy)",
