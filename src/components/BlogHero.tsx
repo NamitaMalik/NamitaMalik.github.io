@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Code2, BookOpen, Lightbulb, Share2, Github, Twitter, Linkedin } from "lucide-react";
+import { Wrench, BookOpen, Lightbulb, Share2, Github, Twitter, Linkedin } from "lucide-react";
 
 export const BlogHero = () => {
   return (
@@ -22,22 +22,22 @@ export const BlogHero = () => {
         <div className="flex items-center justify-center gap-6 text-xl text-muted-foreground mb-8 font-medium">
           <div className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-primary" />
-            <span>LEARN</span>
+            <span>Learn.</span>
           </div>
           <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
           <div className="flex items-center gap-2">
             <Lightbulb className="h-5 w-5 text-primary" />
-            <span>THINK</span>
+            <span>Think.</span>
           </div>
           <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
           <div className="flex items-center gap-2">
-            <Code2 className="h-5 w-5 text-primary" />
-            <span>CODE</span>
+            <Wrench className="h-5 w-5 text-primary" />
+            <span>Engineer.</span>
           </div>
           <div className="w-1 h-1 bg-muted-foreground rounded-full"></div>
           <div className="flex items-center gap-2">
             <Share2 className="h-5 w-5 text-primary" />
-            <span>SHARE</span>
+            <span>Share.</span>
           </div>
         </div>
         
