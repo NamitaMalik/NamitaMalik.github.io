@@ -1,0 +1,363 @@
+# Dear Future Me: Understand the Layers Before You Add Them
+
+Early in my career, I used to look at architecture diagrams full of boxes, arrows, gateways, proxies, clusters, and clouds and assume one thing:
+
+**Complexity meant maturity.**
+
+If a system had a CDN, WAF, reverse proxy, ingress controller, API gateway, BFF layer, and a fleet of services, it *must* be well designed.
+
+Years later, I know better.
+
+A layered architecture is not automatically good or bad. Every layer can solve a real problem — but every layer also adds ownership boundaries, debugging complexity, operational cost, latency, and failure points.
+
+So future me, before adding another box to the diagram, understand what that layer is actually for.
+
+---
+
+## The Familiar Chain
+
+```text
+Internet -> CDN/WAF -> Nginx/Ingress -> API Gateway -> BFF -> Services
+```
+
+This stack is common in enterprise environments. Sometimes it is justified. Sometimes it is cargo cult architecture.
+
+Let’s break it down.
+
+---
+
+## 1. Internet
+
+This is simply your incoming traffic:
+
+* browsers
+* mobile apps
+* partner systems
+* third-party consumers
+* internal users over public/private networks
+
+This is where latency, trust, and reliability begin.
+
+Users do not care how many layers you have.
+
+They care whether the product is fast and works.
+
+---
+
+## 2. CDN (Content Delivery Network)
+
+A CDN caches static assets closer to users geographically.
+
+Examples:
+
+* JavaScript bundles
+* CSS
+* images
+* fonts
+* downloadable assets
+
+### When it makes sense
+
+Use a CDN when:
+
+* users are spread across regions
+* frontend bundles are sizable
+* performance matters
+* traffic spikes happen
+* you want to reduce origin load
+
+For a modern SPA with users across countries, this often makes perfect sense.
+
+### When it may not
+
+For a small internal tool used in one office or one region, the value may be limited.
+
+### Future me reminder
+
+A CDN should solve scale and distance problems — not exist because “serious companies use one.”
+
+---
+
+## 3. WAF (Web Application Firewall)
+
+A WAF helps detect and block malicious traffic patterns.
+
+Examples:
+
+* common injection attempts
+* bot traffic
+* abusive requests
+* suspicious payloads
+* exploit signatures
+
+### When it makes sense
+
+Use a WAF when:
+
+* your app is internet-facing
+* you process sensitive data
+* your threat profile is meaningful
+* you need baseline protection quickly
+* compliance matters
+
+### When it may not
+
+For internal tools behind VPN, SSO, private networks, and limited access, it may not be the first thing to optimize.
+
+### Future me reminder
+
+A WAF is a safety layer, not a substitute for secure application design.
+
+---
+
+## 4. Nginx / Reverse Proxy / Ingress
+
+This layer receives requests and routes them to the right applications or services.
+
+Typical responsibilities:
+
+* TLS termination
+* path routing
+* load balancing
+* compression
+* header management
+* connection handling
+
+Example:
+
+```text
+/app -> frontend
+/api -> backend
+/auth -> auth service
+```
+
+### When it makes sense
+
+Use this when:
+
+* multiple apps share one domain
+* backend systems should stay private
+* centralized routing helps
+* traffic management is needed
+
+In Kubernetes, ingress controllers often play this role.
+
+### When it may not
+
+If your cloud platform already provides routing cleanly, adding another proxy layer can become duplication.
+
+### Future me reminder
+
+Reverse proxies often help.
+
+Two reverse proxies with unclear ownership often do not.
+
+---
+
+## 5. API Gateway
+
+This is where many teams add complexity faster than value.
+
+An API gateway can provide:
+
+* token validation
+* API keys
+* rate limits
+* quotas
+* analytics
+* request transformation
+* version management
+* consumer-specific policies
+
+### When it makes sense
+
+Use an API gateway when APIs are consumed by:
+
+* many teams
+* multiple client apps
+* external partners
+* public developers
+* regulated consumers
+* different consumers needing different policies
+
+Use it when APIs are products or platforms.
+
+### When it may not
+
+For one internal frontend consuming one backend, it can become ceremony.
+
+Sometimes what you really needed was:
+
+* cleaner APIs
+* better ownership boundaries
+* simpler auth
+* a BFF layer
+* clearer contracts
+
+### Future me reminder
+
+An API gateway cannot rescue poor service design.
+
+---
+
+## 6. BFF (Backend for Frontend)
+
+A BFF sits between the frontend and backend services.
+
+```text
+Frontend -> BFF -> Services
+```
+
+It is designed around client experience needs rather than backend domain boundaries.
+
+It can:
+
+* aggregate multiple service calls
+* reshape responses for UI needs
+* reduce frontend orchestration complexity
+* hide backend topology
+* support client-specific auth/session flows
+* improve frontend delivery speed
+
+### When it makes sense
+
+Use a BFF when:
+
+* one screen depends on many services
+* frontend code is stitching too many APIs together
+* web and mobile need different responses
+* client-side latency is high
+* domain APIs do not map well to product experiences
+
+### When it may not
+
+A BFF becomes wasteful when:
+
+* it only forwards requests unchanged
+* one frontend already talks cleanly to one backend
+* many BFFs duplicate business logic
+* it becomes a dumping ground for backend gaps
+
+### Future me reminder
+
+A good BFF simplifies the frontend.
+
+A bad BFF is just a frontend monolith running on a server.
+
+---
+
+## 7. Services
+
+This is where business value actually lives.
+
+Examples:
+
+* payments
+* profile
+* orders
+* compliance
+* notifications
+* pricing
+
+Everything before this point should exist to help services deliver value safely and efficiently.
+
+### Future me reminder
+
+Never let infrastructure become more sophisticated than the product it serves.
+
+---
+
+# What Enterprises Often Need
+
+Large enterprises may genuinely need more layers because they have:
+
+* multiple regions
+* many teams
+* legacy systems
+* audit requirements
+* partner integrations
+* large traffic volumes
+* separate ownership models
+* strict governance
+
+In these environments, layers can reduce chaos.
+
+But even enterprises should justify every one of them.
+
+---
+
+# What Smaller Systems Often Need
+
+Many systems are better served by:
+
+```text
+Internet -> CDN -> App
+```
+
+or
+
+```text
+Internet -> Reverse Proxy -> App
+```
+
+or simply:
+
+```text
+Internal Users -> App
+```
+
+Simple systems are easier to:
+
+* understand
+* secure
+* debug
+* operate
+* evolve
+
+---
+
+# Hidden Costs of Extra Layers
+
+Every new hop can add:
+
+* latency
+* duplicated config
+* ownership confusion
+* slower incident response
+* finger-pointing
+* release friction
+* monitoring noise
+* operational overhead
+
+Architecture diagrams rarely show these costs.
+
+---
+
+# Questions to Ask Before Adding a Layer
+
+Future me, ask these first:
+
+1. What specific pain does this solve today?
+2. Can an existing layer already solve it?
+3. Who owns it operationally?
+4. What latency and complexity does it add?
+5. What happens during incidents?
+6. Would a simpler design be enough for the next 12–24 months?
+
+---
+
+# Final Advice to Future Me
+
+Do not add components to look senior.
+
+Do not copy big-tech diagrams into ordinary systems.
+
+Do not confuse complexity with capability.
+
+Use layers when they remove pain, not when they add prestige.
+
+The best architecture often looks boring, clear, and proportionate.
+
+And whenever someone proposes another box in the diagram, ask:
+
+**What becomes simpler because of this?**
