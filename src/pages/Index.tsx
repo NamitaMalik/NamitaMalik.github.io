@@ -64,12 +64,6 @@ const Index = () => {
       ]
     },
     {
-      category: "Software Architecture",
-      icon: <Building2 className="h-6 w-6" />,
-      description: "System design principles, architectural patterns, and scalable software design.",
-      posts: []
-    },
-    {
       category: "AngularJS (Legacy)",
       icon: <Settings className="h-6 w-6" />,
       description: "AngularJS 1.x patterns, testing strategies, and migration insights.",
