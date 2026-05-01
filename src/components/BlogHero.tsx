@@ -42,8 +42,7 @@ export const BlogHero = () => {
         </div>
         
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
-          Exploring the world of web development through Angular, JavaScript, RxJS, and modern web technologies. 
-          Join me on this journey of continuous learning and knowledge sharing.
+          Writing about software engineering, architecture, systems thinking, and modern web development.
         </p>
         
         {/* Social Media Icons */}
