@@ -288,31 +288,124 @@ But even enterprises should justify every one of them.
 
 # What Smaller Systems Often Need
 
-Many systems are better served by:
+Not every application needs a multi-layer enterprise traffic stack.
+
+Many smaller systems — or systems with simpler operational needs — are often better served by proportionate architectures that are easier to build, run, and evolve.
+
+The goal is not to remove layers for the sake of minimalism.
+
+The goal is to use only what genuinely adds value.
+
+## 1. Internet -> CDN -> App
 
 ```text
 Internet -> CDN -> App
 ```
 
-or
+This is a strong pattern for frontend-heavy applications.
+
+A CDN sits close to users geographically and serves cached static assets such as:
+
+* JavaScript bundles
+* CSS
+* images
+* fonts
+
+If a request cannot be served from cache, it is forwarded to the application origin.
+
+### Often suitable for
+
+* static SPAs
+* marketing sites
+* lightweight SaaS products
+* content-led platforms
+* globally distributed users
+
+### Why it works
+
+* strong frontend performance
+* lower origin load
+* relatively low operational complexity
+* scalable without many moving parts
+
+## 2. Internet -> Reverse Proxy -> App
 
 ```text
 Internet -> Reverse Proxy -> App
 ```
 
-or simply:
+This is one of the most common production patterns.
+
+A reverse proxy such as Nginx, Apache, HAProxy, or Traefik sits in front of the application.
+
+It can handle:
+
+* HTTPS termination
+* routing
+* load balancing
+* compression
+* security headers
+* hiding internal app ports
+
+### Often suitable for
+
+* web apps with custom backends
+* containerized applications
+* monoliths or modular backends
+* apps needing centralized traffic control
+
+### Why it works
+
+* keeps app logic separate from web traffic concerns
+* battle-tested and operationally practical
+* flexible without excessive complexity
+
+## 3. Internal Users -> App
 
 ```text
 Internal Users -> App
 ```
 
-Simple systems are easier to:
+Sometimes the right answer is simply an internal application for trusted users.
 
-* understand
-* secure
-* debug
-* operate
-* evolve
+Access may happen through:
+
+* corporate network
+* VPN
+* zero-trust access platform
+* internal load balancer
+
+### Often suitable for
+
+* intranet tools
+* internal dashboards
+* admin portals
+* finance systems
+* engineering tools
+
+### Why it works
+
+* fewer moving parts
+* lower cost
+* easier debugging
+* faster delivery cycles
+* proportionate to actual risk and scale
+
+## Important Reminder
+
+These diagrams are intentionally simplified.
+
+Real systems may still include components such as DNS, identity providers, monitoring, backups, or internal networking controls.
+
+The point is not literal simplicity.
+
+The point is proportionate architecture.
+
+### Future Me Reminder
+
+Simple architecture is not immature architecture.
+
+A smaller system that is secure, reliable, and easy to change is often better than a larger system designed to impress diagrams rather than serve users.
 
 ---
 
