@@ -16,9 +16,12 @@ So future me, before adding another box to the diagram, understand what that lay
 
 ## The Familiar Chain
 
+A Common Enterprise Pattern Might Look Like:
+
 ```text
-Internet -> CDN/WAF -> Nginx/Ingress -> API Gateway -> BFF -> Services
+Internet -> CDN -> WAF -> API Gateway -> NGINX/LB -> BFF -> Services
 ```
+In practice, many vendors combine multiple layers, so the exact order varies.
 
 This stack is common in enterprise environments. Sometimes it is justified. Sometimes it is cargo cult architecture.
 
@@ -110,51 +113,7 @@ A WAF is a safety layer, not a substitute for secure application design.
 
 ---
 
-## 4. Nginx / Reverse Proxy / Ingress
-
-This layer receives requests and routes them to the right applications or services.
-
-Typical responsibilities:
-
-* TLS termination
-* path routing
-* load balancing
-* compression
-* header management
-* connection handling
-
-Example:
-
-```text
-/app -> frontend
-/api -> backend
-/auth -> auth service
-```
-
-### When it makes sense
-
-Use this when:
-
-* multiple apps share one domain
-* backend systems should stay private
-* centralized routing helps
-* traffic management is needed
-
-In Kubernetes, ingress controllers often play this role.
-
-### When it may not
-
-If your cloud platform already provides routing cleanly, adding another proxy layer can become duplication.
-
-### Future me reminder
-
-Reverse proxies often help.
-
-Two reverse proxies with unclear ownership often do not.
-
----
-
-## 5. API Gateway
+## 4. API Gateway
 
 This is where many teams add complexity faster than value.
 
@@ -197,6 +156,50 @@ Sometimes what you really needed was:
 ### Future me reminder
 
 An API gateway cannot rescue poor service design.
+
+---
+
+## 5. Nginx / Reverse Proxy / Ingress
+
+This layer receives requests and routes them to the right applications or services.
+
+Typical responsibilities:
+
+* TLS termination
+* path routing
+* load balancing
+* compression
+* header management
+* connection handling
+
+Example:
+
+```text
+/app -> frontend
+/api -> backend
+/auth -> auth service
+```
+
+### When it makes sense
+
+Use this when:
+
+* multiple apps share one domain
+* backend systems should stay private
+* centralized routing helps
+* traffic management is needed
+
+In Kubernetes, ingress controllers often play this role.
+
+### When it may not
+
+If your cloud platform already provides routing cleanly, adding another proxy layer can become duplication.
+
+### Future me reminder
+
+Reverse proxies often help.
+
+Two reverse proxies with unclear ownership often do not.
 
 ---
 
