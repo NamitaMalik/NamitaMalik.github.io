@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Code2, BookOpen, Lightbulb, Share2, Github, Twitter, Linkedin } from "lucide-react";
+import { Wrench, BookOpen, Lightbulb, Share2, Github, Twitter, Linkedin } from "lucide-react";
 
 export const BlogHero = () => {
   return (
