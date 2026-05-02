@@ -1,6 +1,6 @@
 import { BlogHero } from "@/components/BlogHero";
 import { BlogCard } from "@/components/BlogCard";
-import { Code2, Zap, Database, Globe, Layers, Settings, Building2 } from "lucide-react";
+import { Code2, Zap, Database, Globe, Layers, Settings, Building2, Brain } from "lucide-react";
 
 const Index = () => {
   const blogData = [
@@ -10,6 +10,14 @@ const Index = () => {
       description: "System design principles, architectural patterns, and scalable software design.",
       posts: [
         { title: "Dear Future Me: Understand the Layers Before You Add Them", url: "/understand-the-layers-before-you-add-them/", category: "Software Architecture" }
+      ]
+    },
+    {
+      category: "AI & Engineering",
+      icon: <Brain className="h-6 w-6" />,
+      description: "Reflections on AI, software engineering practice, and the craft beyond coding.",
+      posts: [
+        { title: "AI Killed Coding, Not Software Engineering", url: "/ai-killed-coding-not-software-engineering/", category: "AI & Engineering" }
       ]
     },
     {
