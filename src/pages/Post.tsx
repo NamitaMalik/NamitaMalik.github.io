@@ -1,17 +1,60 @@
 import { useParams, Link } from "react-router-dom";
-import type { ComponentType } from "react";
+import { useEffect, type ComponentType } from "react";
 import { ArrowLeft, Github, Twitter, Linkedin, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { postMeta, defaultMeta } from "@/lib/postMeta";
 
 // Tell TS that each MDX module exports a React component as default
 const posts = import.meta.glob("../posts/*.mdx", {
     eager: true,
 }) as Record<string, { default: ComponentType }>;
 
+function setMetaTag(attr: "name" | "property", key: string, value: string) {
+    let el = document.head.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+    if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+    }
+    el.setAttribute("content", value);
+}
+
+function setCanonical(href: string) {
+    let el = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", "canonical");
+        document.head.appendChild(el);
+    }
+    el.setAttribute("href", href);
+}
+
 export default function Post() {
     const { slug } = useParams();
     const path = `../posts/${slug}.mdx`;
     const post = posts[path];
+
+    useEffect(() => {
+        const meta = (slug && postMeta[slug]) || defaultMeta;
+        const fullTitle = meta.title.includes("Namita Malik")
+            ? meta.title
+            : `${meta.title} | Namita Malik`;
+        document.title = fullTitle;
+        setMetaTag("name", "description", meta.description);
+        if (meta.keywords) setMetaTag("name", "keywords", meta.keywords);
+        setMetaTag("property", "og:title", fullTitle);
+        setMetaTag("property", "og:description", meta.description);
+        setMetaTag("property", "og:type", "article");
+        setMetaTag("property", "og:url", window.location.href);
+        setMetaTag("name", "twitter:title", fullTitle);
+        setMetaTag("name", "twitter:description", meta.description);
+        setCanonical(window.location.href);
+        return () => {
+            document.title = defaultMeta.title;
+            setMetaTag("name", "description", defaultMeta.description);
+        };
+    }, [slug]);
+
 
     if (!post) {
         return (
