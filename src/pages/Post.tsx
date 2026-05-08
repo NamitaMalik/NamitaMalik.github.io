@@ -119,7 +119,7 @@ export default function Post() {
                             <Github className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-smooth" />
                         </a>
                         <a
-                            href="https://twitter.com/namitamalik"
+                            href="https://x.com/nm_1304"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full hover:bg-accent/10 transition-smooth group"
