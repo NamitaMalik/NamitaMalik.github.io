@@ -1,6 +1,6 @@
 import { BlogHero } from "@/components/BlogHero";
 import { BlogCard } from "@/components/BlogCard";
-import { Code2, Zap, Database, Globe, Layers, Settings, Building2, Brain } from "lucide-react";
+import { Code2, Zap, Database, Globe, Layers, Settings, Building2, Brain, Heart } from "lucide-react";
 
 const Index = () => {
   const blogData = [
@@ -10,6 +10,14 @@ const Index = () => {
       description: "System design principles, architectural patterns, and scalable software design.",
       posts: [
         { title: "Dear Future Me: Understand the Layers Before You Add Them", url: "/understand-the-layers-before-you-add-them/", category: "Software Architecture" }
+      ]
+    },
+    {
+      category: "Leadership",
+      icon: <Heart className="h-6 w-6" />,
+      description: "Reflections on leadership, culture, and the people who shape how we work.",
+      posts: [
+        { title: "Kindness, Firmness, and the Leaders We Remember", url: "/kindness-firmness-and-the-leaders-we-remember/", category: "Leadership" }
       ]
     },
     {
