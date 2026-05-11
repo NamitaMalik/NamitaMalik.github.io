@@ -46,6 +46,11 @@ export default function Post() {
         setMetaTag("property", "og:description", meta.description);
         setMetaTag("property", "og:type", "article");
         setMetaTag("property", "og:url", window.location.href);
+        if (meta.image) {
+            setMetaTag("property", "og:image", meta.image);
+            setMetaTag("name", "twitter:image", meta.image);
+        }
+        setMetaTag("name", "twitter:card", "summary_large_image");
         setMetaTag("name", "twitter:title", fullTitle);
         setMetaTag("name", "twitter:description", meta.description);
         setCanonical(window.location.href);
