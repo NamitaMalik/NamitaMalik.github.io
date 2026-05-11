@@ -12,6 +12,7 @@ export const postMeta: Record<string, PostMeta> = {
       "Reflections on leadership: how kindness paired with firmness, presence, and accountability shapes teams, careers, and the leaders we never forget.",
     keywords:
       "leadership, kindness, firmness, mentorship, accountability, psychological safety, engineering management",
+    image: "https://namitamalik.github.io/kindness-firmness-leadership.png",
   },
   "ai-killed-coding-not-software-engineering": {
     title: "AI Killed Coding, Not Software Engineering",
