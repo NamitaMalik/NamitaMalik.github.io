@@ -14,6 +14,13 @@ export const postMeta: Record<string, PostMeta> = {
       "leadership, kindness, firmness, mentorship, accountability, psychological safety, engineering management",
     image: "https://namitamalik.github.io/kindness-firmness-leadership.png",
   },
+  "ai-solved-execution-coordination-is-the-next-bottleneck": {
+    title: "AI Solved Execution. Coordination Is the Next Bottleneck.",
+    description:
+      "AI is rapidly solving software execution, but coordination — the real bottleneck in enterprise engineering — still runs on meetings, Jira, and human memory. Why the next frontier is AI orchestration.",
+    keywords:
+      "AI orchestration, software delivery, coordination, enterprise engineering, execution, agentic AI, developer productivity",
+  },
   "ai-killed-coding-not-software-engineering": {
     title: "AI Killed Coding, Not Software Engineering",
     description:
