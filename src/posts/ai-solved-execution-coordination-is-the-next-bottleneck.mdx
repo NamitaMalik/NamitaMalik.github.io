@@ -1,0 +1,173 @@
+# AI Solved Execution. Coordination Is the Next Bottleneck.
+
+> "We've spent the last two years teaching AI how to write software. Maybe we should have been teaching it how to coordinate software delivery instead."
+
+There is a narrative dominating the AI conversation in software engineering.
+
+AI will replace developers.
+
+AI will write all the code.
+
+AI will generate tests.
+
+AI will review pull requests.
+
+And to be fair, it's getting remarkably good at all of those things.
+
+Tools like Cursor, Claude Code, Kiro, GitHub Copilot and others have fundamentally changed how software is built. They reduce the time between an idea and working code. They automate many of the repetitive tasks that once consumed hours.
+
+In other words, AI is rapidly solving execution.
+
+But after spending more than a decade building software in large engineering organizations, I don't think execution was ever the biggest bottleneck.
+
+Coordination was.
+
+## The Wrong Bottleneck
+
+Imagine a feature that touches five teams.
+
+A payment API needs to change.
+
+The mobile application needs updating.
+
+Documentation must be revised.
+
+Infrastructure requires a new configuration.
+
+QA can't begin until every dependency is available.
+
+None of these teams struggle because they can't write code.
+
+They struggle because they depend on each other.
+
+Every day, someone asks questions like:
+
+* Is the API ready?
+* Has the architecture been approved?
+* Can frontend start now?
+* Which teams are blocked?
+* Has the documentation been updated?
+* Who needs to review this change?
+* What can happen in parallel?
+
+Those questions are rarely answered by the codebase itself.
+
+They're answered through meetings. Slack. Jira. Status reports. Human memory.
+
+The larger the organization becomes, the larger this coordination tax grows.
+
+## Enterprise Software Has Two Systems
+
+This is where I think we've been looking at software delivery incorrectly.
+
+We tend to think of software development as a single system.
+
+Requirements. Design. Implementation. Testing. Deployment.
+
+But enterprises actually operate two different systems simultaneously.
+
+### Execution
+
+Execution creates software.
+
+Requirements become architecture.
+
+Architecture becomes code.
+
+Code becomes tests.
+
+Tests become deployments.
+
+This is exactly where AI is making extraordinary progress.
+
+### Coordination
+
+Coordination answers completely different questions.
+
+* Who should work next?
+* Which work is blocked?
+* Which teams are affected?
+* Has a dependency changed?
+* Should documentation be regenerated?
+* Can two streams of work execute in parallel?
+* Who needs human approval?
+
+This system doesn't produce software.
+
+It produces alignment.
+
+And unlike execution, coordination is still overwhelmingly manual.
+
+## We Keep Optimizing the Wrong Layer
+
+For two decades we've experimented with different organizational structures.
+
+Scrum. SAFe. Spotify Squads. Team Topologies. Pods.
+
+Each promises faster software delivery.
+
+Each reorganizes people.
+
+Very few fundamentally change how coordination happens.
+
+A feature still moves through meetings. Status updates. Dependency tracking. Manual planning.
+
+The organizational chart changes.
+
+The coordination mechanism doesn't.
+
+## The Missing Layer
+
+I believe enterprise software delivery is missing a dedicated orchestration layer.
+
+Not another project manager.
+
+Not another framework.
+
+An AI orchestrator.
+
+Its responsibility isn't writing software.
+
+Its responsibility is continuously answering one question:
+
+> Given the current state of engineering, what should happen next?
+
+Every event becomes an input.
+
+A Jira ticket changes. A pull request merges. A test fails. An API contract evolves. Documentation becomes outdated.
+
+The orchestrator updates its understanding of the system and determines the next best action.
+
+Not once a sprint.
+
+Continuously.
+
+## Execution vs Coordination
+
+This is the distinction I think will define the next generation of engineering organizations.
+
+AI coding assistants optimize execution.
+
+AI orchestrators optimize coordination.
+
+They're solving entirely different problems.
+
+One writes code.
+
+The other keeps hundreds of interdependent pieces of work moving toward a common goal.
+
+## A Different Future
+
+Perhaps the biggest impact of AI in enterprise software won't be replacing developers.
+
+It will be replacing the coordination overhead we've accepted for decades as an unavoidable cost of building software at scale.
+
+We've spent twenty years reinventing how teams execute software.
+
+Maybe the next breakthrough won't come from changing the teams.
+
+Maybe it will come from changing how they're coordinated.
+
+Because AI has already started solving execution.
+
+Coordination is the next frontier.
