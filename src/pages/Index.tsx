@@ -25,6 +25,7 @@ const Index = () => {
       icon: <Brain className="h-6 w-6" />,
       description: "Reflections on AI, software engineering practice, and the craft beyond coding.",
       posts: [
+        { title: "AI Solved Execution. Coordination Is the Next Bottleneck.", url: "/ai-solved-execution-coordination-is-the-next-bottleneck/", category: "AI & Engineering" },
         { title: "AI Killed Coding, Not Software Engineering", url: "/ai-killed-coding-not-software-engineering/", category: "AI & Engineering" }
       ]
     },
