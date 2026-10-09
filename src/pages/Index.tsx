@@ -17,7 +17,7 @@ const Index = () => {
       icon: <Heart className="h-6 w-6" />,
       description: "Reflections on leadership, culture, and the people who shape how we work.",
       posts: [
-        { title: "Kindness, Firmness, and the Leaders We Remember", url: "/kindness-firmness-and-the-safety-to-make-mistakes/", category: "Leadership" }
+        { title: "Kindness, Firmness, and the Safety to Make Mistakes", url: "/kindness-firmness-and-the-safety-to-make-mistakes/", category: "Leadership" }
       ]
     },
     {
