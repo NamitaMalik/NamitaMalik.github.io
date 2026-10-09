@@ -5,14 +5,6 @@ import { Code2, Zap, Database, Globe, Layers, Settings, Building2, Brain, Heart 
 const Index = () => {
   const blogData = [
     {
-      category: "Software Architecture",
-      icon: <Building2 className="h-6 w-6" />,
-      description: "System design principles, architectural patterns, and scalable software design.",
-      posts: [
-        { title: "Dear Future Me: Understand the Layers Before You Add Them", url: "/understand-the-layers-before-you-add-them/", category: "Software Architecture" }
-      ]
-    },
-    {
       category: "Leadership",
       icon: <Heart className="h-6 w-6" />,
       description: "Reflections on leadership, culture, and the people who shape how we work.",
@@ -27,6 +19,14 @@ const Index = () => {
       posts: [
         { title: "AI Solved Execution. Coordination Is the Next Bottleneck.", url: "/ai-solved-execution-coordination-is-the-next-bottleneck/", category: "AI & Engineering" },
         { title: "AI Killed Coding, Not Software Engineering", url: "/ai-killed-coding-not-software-engineering/", category: "AI & Engineering" }
+      ]
+    },
+     {
+      category: "Software Architecture",
+      icon: <Building2 className="h-6 w-6" />,
+      description: "System design principles, architectural patterns, and scalable software design.",
+      posts: [
+        { title: "Dear Future Me: Understand the Layers Before You Add Them", url: "/understand-the-layers-before-you-add-them/", category: "Software Architecture" }
       ]
     },
     {
