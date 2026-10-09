@@ -21,12 +21,14 @@ const Index = () => {
         { title: "AI Killed Coding, Not Software Engineering", url: "/ai-killed-coding-not-software-engineering/", category: "AI & Engineering" }
       ]
     },
-     {
-      category: "Software Architecture",
-      icon: <Building2 className="h-6 w-6" />,
-      description: "System design principles, architectural patterns, and scalable software design.",
+    {
+      category: "RxJS",
+      icon: <Zap className="h-6 w-6" />,
+      description: "Reactive programming with RxJS - operators, patterns, and real-world applications.",
       posts: [
-        { title: "Dear Future Me: Understand the Layers Before You Add Them", url: "/understand-the-layers-before-you-add-them/", category: "Software Architecture" }
+        { title: "skipWhile vs filter in RxJS", url: "/skipwhile-vs-filter-in-rxjs/", category: "RxJS" },
+        { title: "throttleTime vs debounceTime", url: "/throttletime-vs-debouncetime-in-rxjs/", category: "RxJS" },
+        { title: "Map vs FlatMap", url: "/map-vs-flatmap/", category: "RxJS" }
       ]
     },
     {
@@ -41,16 +43,6 @@ const Index = () => {
         { title: "ViewChild in Angular2", url: "/viewchild-in-angular2/", category: "Angular(2+)" },
         { title: "Services In Angular2", url: "/services-in-angular2/", category: "Angular(2+)" },
         { title: "NgRepeat vs ngFor", url: "/ngrepeat-vs-ngfor/", category: "Angular(2+)" }
-      ]
-    },
-    {
-      category: "RxJS",
-      icon: <Zap className="h-6 w-6" />,
-      description: "Reactive programming with RxJS - operators, patterns, and real-world applications.",
-      posts: [
-        { title: "skipWhile vs filter in RxJS", url: "/skipwhile-vs-filter-in-rxjs/", category: "RxJS" },
-        { title: "throttleTime vs debounceTime", url: "/throttletime-vs-debouncetime-in-rxjs/", category: "RxJS" },
-        { title: "Map vs FlatMap", url: "/map-vs-flatmap/", category: "RxJS" }
       ]
     },
     {
