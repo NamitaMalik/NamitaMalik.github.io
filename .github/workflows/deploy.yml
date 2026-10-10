@@ -39,7 +39,7 @@ jobs:
           jq '.homepage="https://NamitaMalik.github.io"' package.json > "$TMP" && mv "$TMP" package.json
 
       - name: Build project
-        run: npx vite build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
